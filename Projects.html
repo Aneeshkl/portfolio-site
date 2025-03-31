@@ -1,28 +1,64 @@
-<section class="projects container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="open-btn" onclick="toggleNav()">☰</button>
+    
+    <div id="sidebar" class="sidebar">
+        <ul>
+            <li><a href="javascript:void(0)" class="close-btn" onclick="toggleNav()">×</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <section class="projects container">
     <h1>My Projects</h1>
     <div class="project-grid">
         <!-- Project 1: Internship Program Manager -->
         <div class="project">
+            <a href="https://github.com/Aneeshkl/Internship_Program_Manager" target="_blank">
             <img src="Internship.jpg" alt="Internship Program Manager">
+            </a>
             <h2>Internship Program Manager</h2>
             <p>The Internship Program Manager is a Java MVC application designed to manage various aspects of an internship program. It allows administrators to handle batches, trainers, interns, and the Learning & Development (LD) team, ensuring smooth program execution.</p>
-            <a href="https://github.com/Aneeshkl/Internship_Program_Manager" target="_blank" class="github-btn">View on GitHub</a>
         </div>
 
         <!-- Project 2: Flipkart Sales Analysis -->
         <div class="project">
-            <img src="DataAnalysis.jpg" alt="Flipkart Sales Analysis">
+            <a href="https://github.com/Aneeshkl/Flipkart-Sales-Analysis" target="_blank">
+          <img src="DataAnalysis.jpg" alt="Flipkart Sales Analysis">
+            </a>
             <h2>Flipkart Sales Analysis</h2>
             <p>This project uses a Power BI dashboard to analyze sample Flipkart sales data. It provides key business insights, including sales trends, customer behavior, and product performance, aiding in decision-making, inventory management, and marketing strategy optimization.</p>
-            <a href="https://https://github.com/Aneeshkl/Flipkart-Sales-Analysis" target="_blank" class="github-btn">View on GitHub</a>
         </div>
 
         <!-- Project 3: PyBot -->
         <div class="project">
-            <img src="Pybot.jpg" alt="PyBot">
-            <h2>PyBot</h2>
-            <p>PyBot is a chatbot built using Flask and DialoGPT, featuring a real-time chat interface with a sleek, modern UI. The chatbot can process user messages and generate AI-based responses, making interactions more seamless and engaging.</p>
-            <a href="https://https://github.com/Aneeshkl/Pybot" target="_blank" class="github-btn">View on GitHub</a>
+            <a href="https://github.com/Aneeshkl/Pybot" target="_blank">
+                <img src="Pybot.jpg" alt="Pybot">
+            </a>
+            <h2>Pybot</h2>
+            <p>Pybot is a chatbot built using Flask and DialoGPT, featuring a real-time chat interface with a sleek, modern UI. The chatbot can process user messages and generate AI-based responses, making interactions more seamless and engaging.</p>
         </div>
     </div>
 </section>
+
+    <script>
+        function toggleNav() {
+            let sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "250px";
+            }
+        }
+    </script>
+</body>
+</html>
