@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="open-btn" onclick="toggleNav()">☰</button>
+    
+    <div id="sidebar" class="sidebar">
+        <ul>
+            <li><a href="javascript:void(0)" class="close-btn" onclick="toggleNav()">×</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+   <div class="container">
+        <img src="images/AneeshS.jpg" alt="Aneesh S" class="profile-img">
+        
+        <h1 id="typing-text"></h1>
+      <h2 class="welcome-text">Welcome to my portfolio website.</p>
+
+        <p class="slide-in"><strong>I'm a <strong>Full-Stack Developer</strong> with an experience of one year three months as a Consultant in Genpact who delivers impactful solutions. 
+    My expertise in <strong>Java</strong>, <strong>Spring Boot</strong>, 
+    <strong>React.js</strong>,and <strong>SQL</strong> 
+    allows me to build scalable applications that drive results.</p>
+
+
+        <div class="button-container">
+    <a href="about.html" class="about-btn">About Me</a>
+    <a href="Aneesh_S(Resume9).pdf" class="resume-btn" download>Download Resume</a>
+</div>
+
+    
+    <script>
+        function toggleNav() {
+            let sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "250px";
+            }
+        }
+
+        function typeEffect(element, text, speed) {
+            let i = 0;
+            function typing() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typing, speed);
+                }
+            }
+            typing();
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const typingText = document.getElementById("typing-text");
+            typeEffect(typingText, "Hello, I'm Aneesh S", 100);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Aneesh S</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<button class="open-btn" onclick="openNav()">☰</button>
+
+<div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+
+<section class="about container">
+    <h1 class="fade-in"><i class="fas fa-user"></i> About Me</h1>
+    <p class="slide-in"><strong>Summary:</strong> Results-driven Full-Stack Developer with one year and three months of experience as a Consultant at Genpact, specializing in Java, Spring Boot, React.js and SQL. Passionate about developing scalable applications, optimizing backend performance, and implementing security best practices. Adept at collaborating with cross-functional teams to deliver high-quality software solutions.</p>
+    
+    <h2 class="fade-in"><i class="fas fa-code"></i> Technical Skills</h2>
+<div class="skills-container">
+    <p class="slide-in"><i class="fas fa-laptop-code"></i> <strong>Programming Languages:</strong> 
+        <span class="highlight">Java</span>, <span class="highlight">Python</span>, <span class="highlight">SQL</span>
+    </p>
+    <p class="slide-in"><i class="fas fa-globe"></i> <strong>Web Technologies:</strong> 
+        <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span class="highlight">JavaScript</span>, <span class="highlight">React.js</span>
+    </p>
+    <p class="slide-in"><i class="fas fa-toolbox"></i> <strong>Libraries & Tools:</strong> 
+        <span class="highlight">Spring Boot</span>, <span class="highlight">Spring MVC</span>, <span class="highlight">Power BI</span>, <span class="highlight">Flask</span>
+    </p>
+    <p class="slide-in"><i class="fas fa-cogs"></i> <strong>Development Tools:</strong> 
+        <span class="highlight">GitHub</span>, <span class="highlight">Eclipse</span>, <span class="highlight">VS Code</span>, <span class="highlight">IntelliJ</span>
+    </p>
+    <p class="slide-in"><i class="fas fa-pen-nib"></i> <strong>Creative Skills:</strong> 
+        <span class="highlight">Story Writing</span>, <span class="highlight">Content Writing</span>
+    </p>
+</div>
+
+
+    <h2 class="fade-in"><i class="fas fa-graduation-cap"></i> Education</h2>
+    <div class="education-timeline">
+        <div class="education-item slide-in">
+            <h3>M.Kumarasamy College of Engineering</h3>
+            <p>B.E. in Computer Science, 2019 – 2023 | CGPA: <strong>8.579</strong></p>
+        </div>
+        <div class="education-item slide-in">
+            <h3>Bharathi Higher Secondary School</h3>
+            <p>HSC, 2019 | Percentage: <strong>82.33%</strong></p>
+        </div>
+        <div class="education-item slide-in">
+            <h3>Bharathi Higher Secondary School</h3>
+            <p>SSLC, 2017 | Percentage: <strong>96.6%</strong></p>
+        </div>
+    </div>
+</section>
+
+<script>
+    function openNav() {
+        document.getElementById("sidebar").style.width = "200px";
+    }
+    function closeNav() {
+        document.getElementById("sidebar").style.width = "0";
+    }
+</script>
+
+</body>
+</html>
+
+<style>
+.about.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+    color: white;
+    animation: fadeIn 2s ease-in;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.about p, .about label {
+    color: white;
+}
+
+.education-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #e74c3c;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.education-item:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-in {
+    animation: slideIn 1.5s ease-out;
+}
+</style>
