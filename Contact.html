@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Aneesh S</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<button class="open-btn" onclick="openNav()">☰</button>
+
+<div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+
+<section class="contact container">
+    <h1>Contact Me</h1>
+    <p>If you have any questions, feel free to reach out to me!</p>
+
+    <form action="mailto:aneabidevraji@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="number">Phone Number:</label>
+        <input type="tel" id="number" name="number" required>
+        
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+        
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <!-- Social Contact Details -->
+    <div class="contact-info">
+        <a href="mailto:aneabidevraji@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> Email</a>
+        <a href="tel:+919677873259" class="contact-link"><i class="fas fa-phone"></i> Phone</a>
+        <a href="https://linkedin.com/in/aneesh-s-nkl" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/Aneeshkl" target="_blank" class="contact-link"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+</section>
+
+<script>
+    function openNav() {
+        document.getElementById("sidebar").style.width = "200px";
+    }
+
+    function closeNav() {
+        document.getElementById("sidebar").style.width = "0";
+    }
+</script>
+
+</body>
+</html>
